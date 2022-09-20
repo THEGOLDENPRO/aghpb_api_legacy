@@ -1,7 +1,12 @@
-from . import app
+from . import app, programing_books, API_PATH
 
 from flask import send_from_directory
 
-@app.get("/api/random")
+ProgrammingBooks = programing_books.ProgrammingBooks()
+
+@app.get(API_PATH + "/random")
 def random():
-    return send_from_directory("../files", "lets_play_chiitan.mp4")
+    """Returns completely random book."""
+    book = ProgrammingBooks.random_book(ProgrammingBooks.random_language())
+
+    return send_from_directory("../files", f"{book.file_path}")

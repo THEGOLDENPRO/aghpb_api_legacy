@@ -7,8 +7,8 @@ from .objects.book import ProgrammingBook
 
 class ProgrammingBooks():
     def __init__(self):
-        self.path_to_folder = "../files/"
-        pass
+        self.folder_name = "Anime-Girls-Holding-Programming-Books"
+        self.path_to_folder = f"./files/{self.folder_name}"
 
     def random_language(self) -> str:
         language_list = os.listdir(self.path_to_folder)
@@ -29,7 +29,7 @@ class ProgrammingBooks():
 
                 return ProgrammingBook(
                     file_name=picture_name,
-                    file_path=f"{actual_language}/{picture_name}",
+                    file_path=f"{self.folder_name}/{actual_language}/{picture_name}",
                     language=actual_language,
                 )
 
