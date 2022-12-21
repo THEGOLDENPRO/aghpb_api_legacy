@@ -25,5 +25,5 @@ def add_header(r:Response):
     r.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, public, max-age=0'
     return r
 
-def run():
+def dev_run():
     app.run()
