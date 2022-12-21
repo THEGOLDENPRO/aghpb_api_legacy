@@ -8,5 +8,4 @@ ProgrammingBooks = programing_books.ProgrammingBooks()
 def random():
     """Returns completely random book."""
     book = ProgrammingBooks.random_book(ProgrammingBooks.random_language())
-
     return send_from_directory("../files", f"{book.file_path}")
