@@ -7,4 +7,4 @@
 This is just a git repo for the **old** anime girls holding programming books API I made a while back. 
 I just decided to make it public recently, nothing more.
 
-> I'm working on a rewrite of this over [here]().
+> I'm working on a rewrite of this over [here](https://github.com/THEGOLDENPRO/aghpb_api_rewrite).
